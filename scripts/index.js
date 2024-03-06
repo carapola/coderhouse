@@ -1,3 +1,80 @@
+// PAR OU ÍMPAR
+/* 
+const parOuImpar = () => {
+    const numero = parseInt (prompt ('Insira um número: '))
+    if (numero % 2 === 0) {
+        return (`O número ${numero} é par.`)
+    } else {
+        return (`O número ${numero} é ímpar.`)
+    }
+}
+
+parOuImpar () 
+*/
+
+// ESTAÇÕES DO ANO
+/*
+const estação = () => {
+    const mes = prompt ('Em que mês estamos?');
+    const dia = parseInt (prompt ('E em que dia do mês estamos?'));
+    if (mes === 'Março' && dia >= 21 || mes === 'Abril' || mes === 'Maio' || mes === 'Junho' && dia <= 20) {
+        return (`Hoje é dia ${dia} de ${mes}, e estamos no Outono.`)
+    } else if (mes === 'Junho' && dia >= 21 || mes === 'Julho' || mes === 'Agosto' || mes === 'Setembro' && dia <= 22) {
+        return (`Hoje é dia ${dia} de ${mes}, e estamos no Inverno.`)
+    } else if (mes === 'Setembro' && dia >= 23 || mes === 'Outubro' || mes === 'Novembro' || mes === 'Dezembro' && dia <= 20) {
+        return (`Hoje é dia ${dia} de ${mes}, e estamos na Primavera.`)
+    } else {
+        return (`Hoje é dia ${dia} de ${mes}, e estamos no Verão.`)
+    }
+}
+
+estação ()
+*/
+
+// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 
 Exercício Aula 4 -> FUNÇÕES
@@ -65,34 +142,6 @@ const calcularPreço = () => {
 calcularPreço() 
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Prática de aula
 /* 
 let nome = prompt ("Qual o seu nome?")
@@ -103,9 +152,9 @@ var nomeCompleto = `${nome} ${sobrenome}`
 var idade = 2024 - parseInt(anoNascimento)
 
 alert("Olá, " + nomeCompleto + "! Você tem " + idade + " anos.") 
-*/
 
-/*
+
+
 const numero = parseInt(prompt ("Digite um número:"))
 
 if (numero === 1) {
@@ -121,9 +170,9 @@ if (numero === 1) {
 } else {
     console.log ('Não conheço esse número.')
 }
-*/
 
-/*
+
+
 const numero = parseInt(prompt ("Digite um número de 1 a 100"))
 
 if (numero <= 10) {
@@ -160,9 +209,9 @@ if (numero <= 10) {
     console.log (numero)
     alert ("Seu número é inválido.")
 }
-*/
 
-/*
+
+
 const vogal = prompt ("Digite uma vogal:")
 
 if (vogal != "" && vogal === "A" || vogal === "E" || vogal  === "I" || vogal === "O" || vogal === "U") {
@@ -172,9 +221,9 @@ if (vogal != "" && vogal === "A" || vogal === "E" || vogal  === "I" || vogal ===
     console.log (vogal + " não é uma vogal")
     alert (vogal + " não é uma vogal")
 }
-*/
 
-/*
+
+
 function parOuImpar() {
     const numero = prompt ("Digite um número: ")
     if (numero % 2 === 0) {
@@ -185,9 +234,9 @@ function parOuImpar() {
 }
 
 parOuImpar ()
-*/
 
-/*
+
+
 let resultado = 0
 
 function subtracao() {
@@ -204,9 +253,9 @@ function subtracao() {
 
 subtracao()
 alert (resultado)
-*/
 
-/*
+
+
 let resultado = 0
 
 const multiplicacao = (num1, num2) => num1 * num2
@@ -232,3 +281,40 @@ const calculadora = (num1, operador, num2) => {
 calculadora()
 alert (resultado)
 */
+
+/*
+//REVER REVER REVER REVER REVER REVER REVER REVER REVER REVER REVER REVER REVER REVER REVER REVER REVER REVER REVER REVER
+
+const numero = parseInt (prompt ("Insira um número de 1 a 10: "))
+const verificaNumero = () => { 
+    if (numero < 1 || numero > 10) {
+        return alert ("O número inserido não é válido")
+    }
+    console.log (`Números menores que ${numero}: `)
+    for (let i = 1; i < numero; i++) {
+        console.log (i)
+        }
+    }
+
+verificaNumero()
+
+
+const numero = parseInt (prompt ("Insira um número: "))
+const calcularFatorial = (numero) => {
+    if (numero <= 0) {
+        return ("O número fornecido não é válido.");
+    }
+    let fatorial = 1;
+    let i = 1;
+
+    while (i <= numero) {
+        fatorial *= i;
+        i++;
+    }
+    return fatorial 
+    console.log (fatorial)
+} 
+
+calcularFatorial()
+*/
+
