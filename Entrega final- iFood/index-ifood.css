@@ -1,3 +1,5 @@
+
+
 :root {
     --clr-primary-400: #3e3e3e;
     --clr-primary-300: #717171;
@@ -23,8 +25,9 @@
     --fs-nav: var(--fs-300)
 }
 
-/* RESET START*/
+
 /* Box sizing rules */
+
 *,
 *::before,
 *::after {
@@ -89,5 +92,5 @@ svg {
     scroll-behavior: auto !important;
   }
 }
-/* RESET END*/
+/* RESET END */
 
