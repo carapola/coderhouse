@@ -15,7 +15,7 @@ let Bacon = {
     preçoOriginal: 24.90,
 }
 
-let Queijo = {
+let QueijoQuente = {
     preçoDesconto: 10.90,
     preçoOriginal: 13.90,
 }
@@ -28,17 +28,17 @@ let Rosbife = {
 const opções = ['Italiano', 'Grelhado', 'Bacon', 'Queijo', 'Rosbife'] // Array de todas as opções de itens para comparação com o selecionado nos prompts
 const sacola = [] // Array da sacola, itens adicionados entram aqui
 
-const addGeral = () => { // Botão de adicionar, prompt pede pro cliente digitar o nome do item e a quantidade que deseja adicionar e inclui isso no array da Sacola
+const addGeral = (addGeral) => { // Botão de adicionar, prompt pede pro cliente digitar o nome do item e a quantidade que deseja adicionar e inclui isso no array da Sacola
     const addItemGeral = prompt ('Qual item você deseja adicionar à sacola?')
     const quantItemGeral = parseInt (prompt ('Quantas unidades você deseja adicionar à sacola?'))
     if (opções.includes(addItemGeral) && quantItemGeral == 1) { // Retorna o item adicionado no singular
         for (let i = 0; i < quantItemGeral; i++)
         sacola.push(addItemGeral)
-        return alert (`O item ${addItemGeral} foi adicionado à sua sacola`)
+        alert (`O item ${addItemGeral} foi adicionado à sua sacola`)
     } else if (opções.includes(addItemGeral) && quantItemGeral > 1) { // Retorna o item adicionado no plural
         for (let i = 0; i < quantItemGeral; i++)
         sacola.push(addItemGeral)
-        return alert (`O item ${addItemGeral} foi adicionado ${quantItemGeral} vezes à sua sacola`)
+        alert (`O item ${addItemGeral} foi adicionado ${quantItemGeral} vezes à sua sacola`)
     }
     else if (quantItemGeral == 0) { // Retorna erro caso a quantidade seja 0
         return alert (`Insira uma quantidade válida.`)
@@ -53,13 +53,13 @@ const addIndividual = (item) => { // Botão de adicionar dentro de cada item, pr
     if (quantItemIndividual == 1) { // Retorna o item adicionado no singular
         for (let i = 0; i < quantItemIndividual; i++)
         sacola.push(item)
-        return alert (`O item ${item} foi adicionado à sua sacola`)
+        alert (`O item ${item} foi adicionado à sua sacola`)
     } else if (quantItemIndividual > 1) { // Retorna o item adicionado no plural
         for (let i = 0; i < quantItemIndividual; i++)
         sacola.push(item)
-        return alert (`O item ${item} foi adicionado ${quantItemIndividual} vezes à sua sacola`)
+        alert (`O item ${item} foi adicionado ${quantItemIndividual} vezes à sua sacola`)
     }
-    else if (quantItem == 0) { // Retorna erro caso a quantidade seja 0
+    else if (quantItemIndividual == 0) { // Retorna erro caso a quantidade seja 0
         return alert (`Insira uma quantidade válida.`)
     }
 }

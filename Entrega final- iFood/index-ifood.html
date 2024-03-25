@@ -1,97 +1,178 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>iFood Fake</title> 
-    <!--
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../../src/assets/favicon-ifood.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../src/styles/global.css">
     <link rel="stylesheet" href="./index-ifood.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">   
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    -->
-    <script src="index-ifood.js"></script>
+    <title>Restaurantes</title>
   </head>
 
   <body>
+    <script src="/Entrega final- iFood/index-ifood.js"></script>
+    <header class="header">
+      <div>
+        <a href="../../index.html" role="link" aria-label="Ir para página inicial"> 
+          <img class="header__logo" src="../../src/assets/logo-ifood.png" alt="Logo do Ifood">
+        </a>
+      </div>
+      <nav class="header__nav">              
+        <ul class="nav__list">
+          <li><a href="../../index.html" class="nav__item">Início</a></li>
+          <li><a href="" class="nav__item">Restaurantes</a></li>
+          <li><a href="" class="nav__item">Mercados</a></li>
+          <li><a href="" class="nav__item">Bebidas</a></li>
+          <li><a href="" class="nav__item">Farmácia</a></li>
+          <li><a href="" class="nav__item">Pet</a></li>
+          <li><a href="" class="nav__item">Shopping</a></li>
+        </ul>        
+      </nav>
 
-    <header>
-    
-    </header>
-
-    <main>
+      <form action="" class="header__form_search">
+        <input class="form_search__input_search" role="search" type="search" aria-label="Busque por item ou loja" placeholder="Busque por item ou loja">        
+      </form>
       
-    </main>
-    
-  </body>
+      <button onclick="save_address()" class="header__address">
+        <span class="header__address_street" id="address">
+          Insira seu endereço
+        </span>
+        <img class="header__address_arrow" src="../../src/assets/arrow.png" alt="">
+      </button>
 
-</html>
-  <!--
-  <body>
+        <span class="header__login">
+          <a href="./pages/login/login.html" aria-label="Entrar">
+          <img class="header__login_icon" src="../../src/assets/login.png" alt="Entrar">
+          </a>
+        </span>
 
-    <header>
-        <div> 
-            <nav class="navigation">
-                <ul class="nav-list">
-                    <li><p>Início</p></li>
-                    <li><p>Restaurantes</p></li>
-                    <li><p>Mercado</p></li>
-                    <li><p>Bebidas</p></li>
-                    <li><p>Farmácias</p></li>
-                </ul>
-            </nav>
-        </div>
+        <button onclick="verSacola()" class="header__bag"> <!-- Esse botão ativa a função "verSacola" do JS -->
+          <span>
+          <img class="header__bag_icon" src="../../src/assets/bag.png" alt="Sacola de compras">
+          </span>
+          <span class="header__bag_info">
+            <p class="header-bag__cost">R$ 0,00</p>
+            <p class="header-bag__itens">0 itens</p>
+          </span>
+        </button>        
     </header>
 
     <main>
         <div class="header">
             <h1>Nome do restaurante</h1>  
-            <p>4.5</p>
+            <p><span class="nota">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path fill="#ffa500" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.122 3.572l1.24 5.313L12 16.102z" />
+              </svg>
+              4.5
+            </span></p>
+            <button id="addGeral" type="button" onclick="addGeral();">Adicionar itens à sacola</button> <!-- Esse botão ativa a função "addGeral" do JS -->
         </div>
         <div class="header-2">
             <p>Ver mais</p>
             <p>Pedido mínimo R$ 20,00</p>
         </div>
-        <h2>Destaques</h2> 
+        <h2 class="destaque">Destaques</h2> <!--Pratos-->
         <div class="pratos">
             <div class="prato">
-                <h3>Italiano</h3>
-                <p>Mussarela de búfala, lombo, tomate, cebola caramelizada, alface e manjericão</p>
-                <p>R$ 12,90</p>
+                <h3 class="prato__name">Italiano</h3>
+                <p class="prato__descricao">Mussarela de búfala, lombo, tomate, cebola caramelizada, alface e manjericão</p>
+                <p class="prato__valor">R$ 12,90</p>
                 <p><s>R$ 16,90</s></p>
+                <button class="addIndividual" type="button" onclick="addIndividual(Italiano)">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
             </div>
             <div class="prato">
-                <h3>Grelhado</h3>
-                <p>Peito de frango, mussarela, tomate, alface, peito de peru, picles</p>
-                <p>R$ 15,90</p>
+                <h3 class="prato__name">Grelhado</h3>
+                <p class="prato__descricao">Peito de frango, mussarela, tomate, alface, peito de peru, picles</p>
+                <p class="prato__valor">R$ 15,90</p>
                 <p><s>R$ 19,90</s></p>
+                <button class="addIndividual" type="button" onclick="addIndividual(Grelhado);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
             </div>
             <div class="prato">
-                <h3>Bacon</h3>
-                <p>Bacon, mussarela,  tomate, alface, peito de peru, picles. Acompanha fritas.</p>
-                <p>R$ 19,90</p>
+                <h3 class="prato__name">Bacon</h3>
+                <p class="prato__descricao">Bacon, mussarela,  tomate, alface, peito de peru, picles. Acompanha fritas.</p>
+                <p class="prato__valor">R$ 19,90</p>
                 <p><s>R$ 24,90</s></p>
+                <button class="addIndividual" type="button" onclick="addIndividual(Bacon);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
             </div>
             <div class="prato">
-                <h3>Queijo</h3>
-                <p>Mussarela, queijo prato, orégano</p>
-                <p>R$ 10,90</p>
+                <h3 class="prato__name">Queijo quente</h3>
+                <p class="prato__descricao">Mussarela, queijo prato, orégano</p>
+                <p class="prato__valor">R$ 10,90</p>
                 <p><s>R$ 13,90</s></p>
+                <button class="addIndividual" type="button" onclick="addIndividual(QueijoQuente);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
             </div>
             <div class="prato">
-                <h3>Rosbife</h3>
-                <p>Rosbife, cebola caramelizada, pimenta jalapeno, maionese de ervas</p>
-                <p>R$ 19,90</p>
+                <h3 class="prato__name">Rosbife</h3>
+                <p class="prato__descricao">Rosbife, cebola caramelizada, pimenta jalapeno, maionese de ervas</p>
+                <p class="prato__valor">R$ 19,90</p>
                 <p><s>R$ 24,90</s></p>
+                <button class="addIndividual" type="button" onclick="addIndividual(Rosbife);">Adicionar à sacola</button> <!-- Esse botão ativa a função "addIndividual" do JS -->
             </div>
         </div>
     </main>
     
-  </body>
 
+    <div class="container">        
+    </div>
+
+    <footer class="footer">
+      <section  class="footer__box1">
+        <div>
+          <h3 class="footer__subtitle subtitle1">iFood</h3>
+          <ul class="footer__list list1">
+            <li>Site Institucional</li>
+            <li>Fale conosco</li>
+            <li>Carreiras</li>
+            <li>Entregadores</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__subtitle subtitle2">Descubra</h3>
+          <ul class="footer__list list2">
+            <li>Cadastre seu Restaurante ou Mercado</li>
+            <li>iFood Shop</li>
+            <li>iFood Card</li>
+            <li>Blog iFood Empresas</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__subtitle subtitle3">Social</h3>
+          <ul class="footer__logos">
+            <li><a href="https://www.facebook.com/iFood/" role="button" aria-label="Facebook" target="_blank" rel="noopener">
+                <img class="footer__logos_icon" src="../../src/assets/facebook.png" alt="Facebook">
+              </a></li>
+            <li><a href="https://twitter.com/ifood" role="button" aria-label="Twitter" target="_blank" rel="noopener">
+                <img class="footer__logos_icon" src="../../src/assets/twitter.png" alt="Twitter">        
+              </a></li>
+            <li><a href="https://www.youtube.com/user/ifooddelivery" role="button" aria-label="Youtube" target="_blank" rel="noopener">
+                <img class="footer__logos_icon" src="../../src/assets/youtube.png" alt="YouTube">
+              </a></li>
+            <li><a href="https://www.instagram.com/ifoodbrasil/" role="button" aria-label="Instagram" target="_blank" rel="noopener">
+                <img class="footer__logos_icon" src="../../src/assets/instagram.png" alt="Instagram">
+              </a></li>
+          </ul>
+        </div>
+      </section>
+    
+      <section class="footer__box2">
+        <div class="footer__logo2">
+          <a href="./index.html" title="Voltar ao topo">
+            <img class="footer__logo2_img" src="../../src/assets/logo-ifood-footer.png" alt="Voltar para home">
+          </a>
+        </div>
+        <div class="identificacao1">
+          <p>© Copyright 2021 - iFood - Todos os direitos reservados iFood com Agência de Restaurantes Online S.A.</p>
+          <p>CNPJ 14.380.200/0001-21 / Avenida dos Autonomistas, nº 1496, Vila Yara, Osasco/SP - CEP 06.020-902</p>
+        </div>
+        <div class="identificacao2">
+          <p>ESTA PÁGINA NÃO É REAL</p>
+          <p>Projeto desenvolvido pelo grupo ??</p>
+          <p>Curso de Javascript - 2024</p>
+        </div>
+      </section>
+    </footer>
+    <script src="../../src/scripts/address.js"></script>
+    <script src="../../src/scripts/restaurantes.js"></script>
+  </body>
 </html>
--->
